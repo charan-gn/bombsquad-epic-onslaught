@@ -28,6 +28,9 @@ class EpicOnslaughtPlugin(babase.Plugin):
             spaz.default_boxing_gloves = True
             spaz.set_bomb_count(3)
             spaz._max_bomb_count = 3
+            spaz.bomb_type = 'impact'
+            spaz.bomb_type_default = 'impact'
+            spaz.equip_shields()
             return spaz
 
         OnslaughtGame.spawn_player_spaz = _patched_spawn
