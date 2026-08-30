@@ -31,6 +31,8 @@ class EpicOnslaughtPlugin(babase.Plugin):
             spaz.bomb_type = 'impact'
             spaz.bomb_type_default = 'impact'
             spaz.equip_shields()
+            spaz.shield_hitpoints_max = 999999
+            spaz.shield_hitpoints = 999999
             return spaz
 
         OnslaughtGame.spawn_player_spaz = _patched_spawn
