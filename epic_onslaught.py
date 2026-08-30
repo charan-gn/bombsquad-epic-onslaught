@@ -23,7 +23,9 @@ class EpicOnslaughtPlugin(babase.Plugin):
 
         def _patched_spawn(self_inner, player, position=None, angle=None):
             spaz = _orig_spawn(self_inner, player, position=position, angle=angle)
+            spaz.powerups_expire = False
             spaz.equip_boxing_gloves()
+            spaz.default_boxing_gloves = True
             spaz.set_bomb_count(3)
             spaz._max_bomb_count = 3
             return spaz
